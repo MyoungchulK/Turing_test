@@ -22,6 +22,8 @@ def main_2(inputs = '1, 2, 3'):
     arr_list = np.asarray(inputs.split(','), dtype = int)
 
     arr_len = len(arr_list)
+    if arr_len == 0: return
+
     arr_sum_max = np.full((arr_len), 0, dtype = int)
     for a in range(arr_len):
         arr_con = np.convolve(arr_list, np.ones((a + 1), dtype = int), mode = 'valid')
