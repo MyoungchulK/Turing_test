@@ -20,7 +20,8 @@ def main(inputs):
     mn_range = np.stack([m_range, n_range]).flatten("F")
     mn_len = np.nansum(mn_range)
     mn_cum = np.append(0, np.nancumsum(mn_range))
-    print('Spiral length:', mn_range)
+    print('Spiral each arm length:')
+    print(mn_range)
 
     r_idxs = np.full((2, mn_len), 0, dtype = int)
     for r in range(len(mn_range)):
@@ -43,9 +44,10 @@ def main(inputs):
             r_idxs[1, mn_i:mn_f] = r_int 
         else:
             pass
-    print('Spiral index:', r_idxs) 
+    print('Spiral index toward original array:')
+    print(r_idxs) 
     result = arr_2d[r_idxs[1], r_idxs[0]]
-    print('Result:')
+    print('Reverse Spiral Result:')
     print(result) 
 
 if __name__ == "__main__":
