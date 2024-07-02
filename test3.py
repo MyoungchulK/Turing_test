@@ -7,9 +7,9 @@ def main(inputs):
 
     s_arr = np.array([s_indi for s_indi in inputs], dtype = object)
     s_len = len(s_arr)
-    if s_len % 2 != 0:
-        print(False)
-        return
+    #if s_len % 2 != 0:
+    #    print(False)
+    #    return
 
     temp_f = np.array(['(', '[', '{'], dtype = object)
     temp_b = np.array([')', ']', '}'], dtype = object)
@@ -31,7 +31,6 @@ def main(inputs):
 
     print(result) 
     print(np.all(result)) 
-    return
 
  
 if __name__ == "__main__":
