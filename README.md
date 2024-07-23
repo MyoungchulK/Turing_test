@@ -4,5 +4,5 @@
 
 The contents of the function are actual answers.
 
-You can use an external package. If you use `NumPy`, challenge would be fairly easy:)
+You can use an external package. If you use `NumPy`, the challenge would be fairly easy:)
 
